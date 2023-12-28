@@ -1,29 +1,21 @@
 module.exports = {
-  title: 'Hello VuePress',
+  title: 'Bart',
   description: '',
   head: [
-    ['link', { rel: 'icon', href: '/logo.png' }]
+    ['link', { rel: 'icon', href: 'http://pic.8pig.com/avatar/u_94/633694/fcddab0c421aabc21d390fa75a77cb30.jpg' }]
   ],
   themeConfig: {
     nav: [
       {
-         text: 'Hmoe',
-         link: '/'
+         text: 'diary',
+         link: '/diary/'
       },
-      {
-         text: 'CSS',
-         link: '/css/'
-      },
-      {//这个导航栏对应多个子导航栏
-          text: 'CS与浏览器', // 这里的text就是导航栏上的名字
-          items: [
-            {text: '计算机网络', link: '/cs/network/'},
-            {text: '浏览器相关', link: '/cs/browser/'}, // 对应的路径如下图所示
-            {text: '数据库', link: '/cs/database/'},
-            {text: '操作系统', link: 'cs/os/'}
-          ]
-       }
-    ]
+    ],
+    sidebar: {
+      '/diary/': [
+        '2023-12-28'
+      ],
+    },
   },
   configureWebpack: {
     resolve: {
@@ -31,5 +23,19 @@ module.exports = {
         '@img': 'docs/img'
       }
     }
-  }
+  },
+  plugins: [
+    '@vuepress/blog',
+    {
+      directories: [
+        {
+          // 当前分类的唯一 ID
+          id: 'diary',
+          // 目标文件夹
+          dirname: 'diary',
+          path: '/diary',
+        },
+      ],
+    },
+  ],
 }
