@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   title: 'Bart',
   description: '',
@@ -7,35 +9,35 @@ module.exports = {
   themeConfig: {
     nav: [
       {
-         text: 'diary',
-         link: '/diary/'
+         text: 'Blog',
+         link: '/blog/'
       },
     ],
     sidebar: {
-      '/diary/': [
-        '2023-12-28'
+      '/blog/': [
+        'VirgilAbloh'
       ],
     },
   },
   configureWebpack: {
     resolve: {
       alias: {
-        '@img': 'docs/img'
+        '@img': path.resolve(__dirname, '../img')
       }
     }
   },
-  plugins: [
-    '@vuepress/blog',
-    {
-      directories: [
-        {
-          // 当前分类的唯一 ID
-          id: 'diary',
-          // 目标文件夹
-          dirname: 'diary',
-          path: '/diary',
-        },
-      ],
-    },
-  ],
+  // plugins: [
+  //   '@vuepress/blog',
+  //   {
+  //     directories: [
+  //       {
+  //         // 当前分类的唯一 ID
+  //         id: 'diary',
+  //         // 目标文件夹
+  //         dirname: 'diary',
+  //         path: '/diary',
+  //       },
+  //     ],
+  //   },
+  // ],
 }
