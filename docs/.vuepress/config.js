@@ -15,7 +15,8 @@ module.exports = {
     ],
     sidebar: {
       '/blog/': [
-        'VirgilAbloh'
+        'VirgilAbloh',
+        '2023年度总结'
       ],
     },
   },
