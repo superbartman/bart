@@ -9,14 +9,21 @@ module.exports = {
   themeConfig: {
     nav: [
       {
-         text: 'Blog',
+         text: '随笔',
          link: '/blog/'
       },
+      {
+        text: '健康',
+        link: '/health/'
+     },
+     {
+      text: '阅读',
+      link: '/read/'
+   },
     ],
     sidebar: {
       '/blog/': [
         'VirgilAbloh',
-        '2023年度总结'
       ],
     },
   },
