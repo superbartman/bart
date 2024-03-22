@@ -4,7 +4,7 @@ module.exports = {
   title: 'Bart',
   description: '',
   head: [
-    ['link', { rel: 'icon', href: 'http://pic.8pig.com/avatar/u_94/633694/fcddab0c421aabc21d390fa75a77cb30.jpg' }]
+    ['link', { rel: 'icon', href: 'https://pic.8pig.com/avatar/u_94/633694/fcddab0c421aabc21d390fa75a77cb30.jpg' }]
   ],
   themeConfig: {
     nav: [
